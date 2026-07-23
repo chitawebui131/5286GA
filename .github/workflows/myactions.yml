@@ -7,5 +7,9 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo " My secrets: ${{ secrets.MY }} ."
+      - shell: bash
+      env:
+        SUPER_SECRET: ${{ secrets.MY }}
+      run: |
+        example-command "$SUPER_SECRET"
       
