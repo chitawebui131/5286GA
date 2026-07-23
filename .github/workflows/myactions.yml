@@ -13,5 +13,5 @@ jobs:
       - name: bash
         
         run: |
-             echo " $env_var"
+             echo  $env_var
       
