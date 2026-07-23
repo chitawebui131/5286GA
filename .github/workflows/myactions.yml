@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - shell: bash
-      env:
-        SUPER_SECRET: ${{ secrets.MY }}
-      run: |
-        example-command "$SUPER_SECRET"
+        env:
+           SUPER_SECRET: ${{ secrets.MY }}
+        run: |
+             example-command "$SUPER_SECRET"
       
