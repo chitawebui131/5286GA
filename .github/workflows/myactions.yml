@@ -3,13 +3,15 @@ run-name: ${{ github.actor }} is testing out GitHub Actions
 on:
   push:
   workflow_dispatch:
+env:
+  # Setting an environment variable with the value of a configuration variable
+  env_var: ${{ vars.MY }}
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - shell: bash
-        env:
-           SUPER_SECRET: ${{ secrets.MY }}
+      - name: bash
+        
         run: |
-             example-command "$SUPER_SECRET"
+             echo " $env_var"
       
